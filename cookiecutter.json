@@ -1,0 +1,10 @@
+{
+  "repo_name": "LiberTEM-example",
+  "package_name": "libertem_example",
+  "package_name_pypi": "libertem-example",
+  "description": "Insert PyPi description here",
+  "url": "https://libertem.github.io/LiberTEM-example",
+  "author": "the LiberTEM team",
+  "author_email": "libertem-dev@googlegroups.com",
+  "gh_repo_name": "LiberTEM/LiberTEM-example"
+}
