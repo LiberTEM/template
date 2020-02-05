@@ -18,8 +18,9 @@ Documentation
    :maxdepth: 2
    :caption: Contents:
    
+   changelog
+   acknowledgements
 
-..  insert list of documents for the toc here
 
 Indices and tables
 ------------------
