@@ -8,6 +8,7 @@ Your freshly baked project is ready. Next, you may want to setup integrations:
  * codecov.io for coverage reports
  * codeclimate: add repo on https://codeclimate.com/oss/dashboard and
    https://github.com/organizations/LiberTEM/settings/installations/6617132
+   then enable "pull request status updates" (see github settings on codeclimate.com)
 
 You will also want to adjust some files, like
 
