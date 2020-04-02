@@ -10,6 +10,9 @@ checks:
     config:
       threshold: 8
 plugins:
+  tslint:
+    enabled: true
+    config: client/tslint.json
   sonar-python:
     enabled: true
     config:
@@ -36,3 +39,5 @@ exclude_patterns:
 - "**/vendor/"
 - "**/*_test.go"
 - "**/*.d.ts"
+- "benchmarks/"
+- "prototypes/"
