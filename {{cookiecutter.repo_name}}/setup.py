@@ -81,16 +81,16 @@ setup(
         "numpy",
         "scipy",
         "sparse",
-        "distributed>=1.23.3",
+        "distributed>=2.19.0",
         "click",
         "tornado>=5",
         "matplotlib",
         "pillow",
         "h5py",
         "psutil",
-        # Pinned due to https://github.com/pydata/sparse/issues/257
-        # Ensure compatibility with numpy 1.17
-        "numba>=0.46",
+        # https://github.com/LiberTEM/LiberTEM/issues/763
+        # https://github.com/LiberTEM/LiberTEM/issues/783
+        "numba>=0.49.1",
         "ncempy>=1.4",
         'pywin32!=226;platform_system=="Windows"',
         'scikit-image',
@@ -127,6 +127,7 @@ setup(
         'Development Status :: 4 - Beta',
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
+        'Programming Language :: Python :: 3.8',
         'License :: OSI Approved :: GNU General Public License v3 (GPLv3)',
         'Operating System :: POSIX :: Linux',
         'Operating System :: MacOS :: MacOS X',

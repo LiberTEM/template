@@ -3,9 +3,11 @@ os: linux
 dist: xenial
 cache:
   - pip
+  - directories:
+    - $HOME/.pyenv/versions/
 
 install:
-  - pip install tox
+  - pip install -U tox 'virtualenv>19'
 
 script:
   - tox
@@ -15,6 +17,7 @@ after_success:
 
 jobs:
   include:
+    # Linux tests:
     - stage: test
       env: TOXENV=py36
       python: 3.6
@@ -79,7 +82,7 @@ jobs:
       env: TOXENV=docs-deploy
       python: 3.7
       install:
-        - pip install tox
+        - pip install -U tox 'virtualenv>19'
         - sudo apt-get install -y pandoc
 
     - stage: packaging
