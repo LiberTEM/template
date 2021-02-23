@@ -4,7 +4,7 @@ import codecs
 import subprocess
 from setuptools.command.sdist import sdist
 from setuptools.command.build_py import build_py
-from setuptools import setup
+from setuptools import setup, find_packages
 
 
 class BakedRevisionBuilderSdist(sdist):
@@ -90,7 +90,7 @@ setup(
         "psutil",
         # https://github.com/LiberTEM/LiberTEM/issues/763
         # https://github.com/LiberTEM/LiberTEM/issues/783
-        "numba>=0.49.1",
+        "numba>=0.51",
         "ncempy>=1.4",
         'pywin32!=226;platform_system=="Windows"',
         'scikit-image',
@@ -101,12 +101,10 @@ setup(
     extras_require={
         'torch': 'torch',
         'hdbscan': 'hdbscan',
-        'pyfftw': 'pyfftw',
+        'cupy': 'cupy',
     },
     package_dir={"": "src"},
-    packages=[
-        "{{ cookiecutter.package_name }}",
-    ],
+    packages=find_packages(where='src'),
     # entry_points={
     #     'console_scripts': [
     #         'libertem-server=libertem.web.cli:main',
